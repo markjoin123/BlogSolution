@@ -110,6 +110,7 @@ namespace Blog_Solution.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                //entity是我的Domain的实体，model是我表示层的实体！
                 var entity = model.MapTo<Category>();
                 _categoryService.InsertCategory(entity);
                 if (continueEditing)

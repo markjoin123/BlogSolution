@@ -534,13 +534,7 @@ namespace Blog_Solution.Web.Framework
             }
 
         }
-
-        public static MvcHtmlString Widget(this HtmlHelper helper, string widgetZone, object additionalData = null, string area = null)
-        {
-            return helper.Action("WidgetsByZone", "Widget", new { widgetZone = widgetZone, additionalData = additionalData, area = area });
-        }
-
-        
+                
         public static MvcHtmlString LabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, object htmlAttributes, string suffix)
         {
             string htmlFieldName = ExpressionHelper.GetExpressionText(expression);

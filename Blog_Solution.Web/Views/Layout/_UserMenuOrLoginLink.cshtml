@@ -1,0 +1,16 @@
+﻿@model Blog_Solution.Web.Models.Layout.UserMenuOrLoginLinkViewModel
+@if (Model.CurrentCustomer != null)
+{
+    <li class="dropdown">
+        <a href="" data-toggle="dropdown"><i class="fa fa-user"></i> <span>@Html.Raw(Model.GetShownLoginName())</span> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="@Url.Action("Info", "Customer")"><i class="fa fa-sign-in"></i> @L("Info")</a></li>
+            <li><a href="@Url.Action("Logout", "Account")"><i class="fa fa-sign-out"></i> @L("Logout")</a></li>
+        </ul>
+    </li>
+}
+else
+{
+    <li><a href="@Url.Action("Info", "Customer")"><i class="fa fa-sign-in"></i> @L("Info")</a></li>
+    <li><a href="@Url.Action("Login", "Account")"><i class="fa fa-sign-in"></i> @L("LogIn")</a></li>
+}

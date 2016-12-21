@@ -15,17 +15,21 @@ namespace Blog_Solution.Web
             //~/Bundles/vendor/css
             bundles.Add(
                 new StyleBundle("~/Bundles/vendor/css")
+                    .Include("~/css/main.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/adminLTE/AdminLTE-2.3.0.min.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/bootstrap.min.css", new CssRewriteUrlTransform())
+                    .Include(string.Format("~/Content/kendo/{0}/kendo.common.min.css", kendoVersion), new CssRewriteUrlTransform())
+                    .Include(string.Format("~/Content/kendo/{0}/kendo.default.min.css", kendoVersion), new CssRewriteUrlTransform())
+                    .Include(string.Format("~/Content/kendo/{0}/kendo.bootstrap.min.css", kendoVersion), new CssRewriteUrlTransform())
+                    .Include("~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css", new CssRewriteUrlTransform())
+                    .Include("~/Content/typeahead/typeahead.css", new CssRewriteUrlTransform())
                     .Include("~/Content/themes/base/all.css", new CssRewriteUrlTransform())
-                    .Include("~/Content/bootstrap.css", new CssRewriteUrlTransform())
                     .Include("~/Content/bootstrap-cosmo.min.css", new CssRewriteUrlTransform())
                     .Include("~/Content/toastr.min.css")
                     .Include("~/Scripts/sweetalert/sweet-alert.css")
                     .Include("~/Content/flags/famfamfam-flags.css", new CssRewriteUrlTransform())
                     .Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform())
-                    .Include(string.Format("~/Content/kendo/{0}/kendo.common.min.css",kendoVersion) , new CssRewriteUrlTransform())
-                    .Include(string.Format("~/Content/kendo/{0}/kendo.default.min.css", kendoVersion), new CssRewriteUrlTransform())
-                    .Include(string.Format("~/Content/kendo/{0}/kendo.bootstrap.min.css", kendoVersion), new CssRewriteUrlTransform())
-                    .Include(string.Format("~/Content/adminLTE/AdminLTE-2.3.0.min.css", kendoVersion), new CssRewriteUrlTransform())
+                    .Include("~/Content/adminLTE/skins/_all-skins.min.css", new CssRewriteUrlTransform())
                 );
 
             //~/Bundles/vendor/js/top (These scripts should be included in the head of the page)
@@ -38,7 +42,11 @@ namespace Blog_Solution.Web
                         "~/Scripts/jquery-1.10.2.min.js",
                         "~/Scripts/jquery-ui-1.11.4.min.js",
                         "~/Scripts/bootstrap.min.js",
-                        "~/Scripts/common.js"
+                        "~/Scripts/common.js",
+                        "~/Scripts/typeahead/typeahead.bundle.min.js",
+                        "~/Scripts/search.js",
+                        "~/Scripts/navigation.js",
+                        "~/Scripts/adminLTE/app.min.js"
                     )
                 );
             
@@ -48,6 +56,8 @@ namespace Blog_Solution.Web
                     .Include(
                        "~/Scripts/moment-with-locales.min.js",
                         "~/Scripts/jquery.validate.min.js",
+                        "~/Scripts/jquery-ui-1.11.4.min.js",
+                        "~/Scripts/jquery-migrate-1.2.1.min.js",
                         "~/Scripts/jquery.blockUI.js",
                         "~/Scripts/toastr.min.js",
                         "~/Scripts/sweetalert/sweet-alert.min.js",
@@ -69,10 +79,10 @@ namespace Blog_Solution.Web
             //APPLICATION RESOURCES
 
             //~/Bundles/css
-            bundles.Add(
-                new StyleBundle("~/Bundles/css")
-                    .Include("~/css/main.css")
-                );
+            //bundles.Add(
+            //    new StyleBundle("~/Bundles/css")
+            //        .Include("~/css/main.css")
+            //    );
 
             //~/Bundles/js
             bundles.Add(

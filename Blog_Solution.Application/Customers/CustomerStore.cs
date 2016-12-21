@@ -57,7 +57,6 @@ namespace Blog_Solution.Customers
                 PasswordSalt = customer.PasswordSalt,
                 PasswordFormat = customer.PasswordFormat,
                 PasswordFormatId = customer.PasswordFormatId,
-                UserName =customer.LoginName
             };
         }
 
@@ -79,7 +78,6 @@ namespace Blog_Solution.Customers
                 PasswordSalt = customer.PasswordSalt,
                 PasswordFormat = customer.PasswordFormat,
                 PasswordFormatId = customer.PasswordFormatId,
-                UserName = customer.LoginName
             };
         }
 
