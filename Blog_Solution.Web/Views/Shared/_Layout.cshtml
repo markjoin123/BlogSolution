@@ -40,6 +40,7 @@
 
 </head>
 
+
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="throbber">
         <div class="curtain">
@@ -183,11 +184,6 @@
     <script>
         $(document).ready(function () {
             $('#backTop').backTop();
-
-            $('a.sidebar-toggle').on('click', function () {
-                var collapsed = $('body').hasClass('sidebar-collapse');
-                saveUserPreferences('@(Url.Action("SavePreference", "Preferences"))', '@hideSidebarAttributeName', collapsed);
-            });
         });
     </script>
 </body>

@@ -16,17 +16,42 @@ namespace Blog_Solution.Web
             context.Manager.MainMenu
                 .AddItem(
                     new MenuItemDefinition(
-                        "Home",
-                        new LocalizableString("HomePage", Blog_SolutionConsts.LocalizationSourceName),
+                        "Customer",
+                        new LocalizableString("Customer", Blog_SolutionConsts.LocalizationSourceName),
                         url: "",
                         icon: "fa fa-home"
+                        ).AddItem(
+                        new MenuItemDefinition(
+                            "Customer.List",
+                            new LocalizableString("Customer.List", Blog_SolutionConsts.LocalizationSourceName),
+                            url: "/Customer/List",
+                            icon: "fa-dot-circle-o")
+                        ).AddItem(
+                        new MenuItemDefinition(
+                            "CustomerRole.List",
+                            new LocalizableString("CustomerRole.List", Blog_SolutionConsts.LocalizationSourceName),
+                            url: "/CustomerRole/List",
+                            icon: "fa-dot-circle-o")
                         )
-                ).AddItem(
+                )
+                 .AddItem(
                     new MenuItemDefinition(
-                        "About",
-                        new LocalizableString("About", Blog_SolutionConsts.LocalizationSourceName),
-                        url: "About",
-                        icon: "fa fa-info"
+                        "Catalog",
+                        new LocalizableString("Catalog", Blog_SolutionConsts.LocalizationSourceName),
+                        url: "",
+                        icon: "fa fa-home"
+                        ).AddItem(
+                        new MenuItemDefinition(
+                            "Catalog.List",
+                            new LocalizableString("Catalog.List", Blog_SolutionConsts.LocalizationSourceName),
+                            url: "/Category/List",
+                            icon: "fa-dot-circle-o")
+                        ).AddItem(
+                        new MenuItemDefinition(
+                            "Blog.List",
+                            new LocalizableString("Blog.List", Blog_SolutionConsts.LocalizationSourceName),
+                            url: "/Blog/List",
+                            icon: "fa-dot-circle-o")
                         )
                 );
         }

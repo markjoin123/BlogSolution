@@ -129,8 +129,8 @@
       <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -578,6 +578,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\adminLTE\app.js" />
+    <Content Include="Scripts\adminLTE\app.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\common.js" />
@@ -1052,6 +1054,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerRoleController.cs" />
@@ -1073,6 +1076,8 @@
     <Compile Include="Framework\ResourceDisplayName.cs" />
     <Compile Include="Helper\SelectListHelper.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Catalogs\BlogListModel.cs" />
+    <Compile Include="Models\Catalogs\BlogSimpleModel.cs" />
     <Compile Include="Models\Catalogs\CategoryListModel.cs" />
     <Compile Include="Models\Catalogs\CategoryModel.cs" />
     <Compile Include="Models\Customers\CustomerListModel.cs" />
@@ -1194,6 +1199,7 @@
     <Content Include="Views\Category\_CreateOrUpdate.cshtml" />
     <Content Include="Views\Shared\Menu.cshtml" />
     <Content Include="Views\Layout\_UserMenuOrLoginLink.cshtml" />
+    <Content Include="Views\Blog\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

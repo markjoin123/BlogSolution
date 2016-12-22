@@ -105,12 +105,17 @@ namespace Blog_Solution.Web.Controllers
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="continueEditing"></param>
+        /// <returns></returns>
         [HttpPost, ParameterBasedOnFormName("save-continue", "continueEditing")]
         public ActionResult Create(CategoryModel model, bool continueEditing)
         {
             if (ModelState.IsValid)
             {
-                //entity是我的Domain的实体，model是我表示层的实体！
                 var entity = model.MapTo<Category>();
                 _categoryService.InsertCategory(entity);
                 if (continueEditing)

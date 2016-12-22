@@ -31,7 +31,7 @@ namespace Blog_Solution.Catalog
 
         public IPagedResult<Blog> GetAllBlogs(string keywords = null, 
                                             DateTime? CreatedFrom = null, DateTime? CreatedTo = null, 
-                                            int[] categoryIds = null, bool showHidden = false,
+                                            IList<int> categoryIds = null, bool showHidden = false,
                                             int pageIndex = 0, int pageSize = int.MaxValue)
         {
             var query = _blogRepository.GetAll();
@@ -61,6 +61,14 @@ namespace Blog_Solution.Catalog
             if (blogId == 0)
                 return null;
             return _blogRepository.Get(blogId);
+        }
+
+        public IList<Blog> GetBlogs(int[] Ids)
+        {
+            var query = from b in _blogRepository.GetAll()
+                        where Ids.Contains(b.Id)
+                        select b;
+            return query.ToList();
         }
 
         public IList<Blog> GetBlogs(int[] categoryIds, bool showHidden = false)

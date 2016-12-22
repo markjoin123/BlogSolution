@@ -12,12 +12,25 @@
     <text name="Home_OtherTools" value="许多其它流行的框架/库，如ASP.NET Web API, EntityFramework/NHibernate, Castle Windsor, Log4Net, Twitter Bootstrap, jQuery..." />
     <text name="AboutFormat" value="关于 {0}" />
     <text name="About_AspNetBoilerplateDescription" value="ASP.NET Boilerplate是开发新Web应用的起点,，它吸纳和提供了Web开发的一些最佳实践，以及流行的框架工具集! ASP.NET Boilerplat基础框架能支撑一系列流行的框架实践，如 &lt;strong&gt;NLayer architecture&lt;/strong&gt; and &lt;strong&gt;Domain Driven Design&lt;/strong&gt;." />
-    <text name="ForMoreInformation" value="更多信息" />
+    <text name="Common.AddNew" value="新增" />
+    <text name="Common.Edit" value="操作" />
+    <text name="Common.Keywords" value="关键字" />
     
     <!-- Login  -->
     <text name="Login" value="登录页面" />
     <text name="Account.LoginName" value="登录名称" />
     <text name="Account.Password" value="登录密码" />
     <text name="Account.RememberMe" value="记住密码" />
+    
+    <!--Navi-->
+    <text name="Customer" value="用户模块" />
+    <text name="Customer.List" value="用户列表" />
+    <text name="CustomerRole.List" value="角色列表" />
+    
+    <text name="Catalog.List" value="类别列表" />
+    <text name="Blog.List" value="博客列表" />
+    <text name="Blog.Title" value="标题" />
+    <text name="Blog.Audit" value="是否审核" />
+    
   </texts>
 </localizationDictionary>

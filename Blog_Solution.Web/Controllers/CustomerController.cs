@@ -4,6 +4,7 @@ using Blog_Solution.Customers;
 using Blog_Solution.Domain.Customers;
 using Blog_Solution.Web.Framework;
 using Blog_Solution.Web.Framework.Controllers;
+using Blog_Solution.Web.Framework.Kendoui;
 using Blog_Solution.Web.Framework.Mvc;
 using Blog_Solution.Web.Models.Customers;
 using System;
@@ -75,7 +76,19 @@ namespace Blog_Solution.Web.Controllers
         {
             return View();
         }
-             
+
+        [HttpPost]
+        public ActionResult List(DataSourceRequest command)
+        {
+
+            var customers = _customerService.GetAllCustomers(pageIndex: command.Page - 1, pageSize: command.PageSize);
+            var data = new DataSourceResult {
+                Data = customers.Items,
+                Total = customers.TotalCount
+            };
+            return AbpJson(data);
+
+        }
 
         public ActionResult Create()
         {

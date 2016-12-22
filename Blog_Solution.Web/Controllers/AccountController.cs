@@ -4,8 +4,6 @@ using Blog_Solution.Customers.Dto;
 using Microsoft.Owin.Security;
 using Microsoft.AspNet.Identity.Owin;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Blog_Solution.Web.Models.Account;
@@ -35,7 +33,7 @@ namespace Blog_Solution.Web.Controllers
         private IAuthenticationManager AuthenticationManager
         {
             get
-            {
+            {                
                 return HttpContext.GetOwinContext().Authentication;
             }
         }
@@ -97,7 +95,7 @@ namespace Blog_Solution.Web.Controllers
         public ActionResult Logout()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Login");
+            return Redirect("/");
         }
 
         #endregion

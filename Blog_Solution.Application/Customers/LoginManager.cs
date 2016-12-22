@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Blog_Solution.Customers
 {
-
+    /// <summary>
+    /// 登录模块
+    /// </summary>
     public class LoginManager : SignInManager<Customer, int>, IApplicationService
     {
         private readonly UserManager<Customer, int> _userManager;

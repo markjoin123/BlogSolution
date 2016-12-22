@@ -13,10 +13,6 @@ namespace Blog_Solution.Web.App_Start
     {
         public void Configuration(IAppBuilder app)
         {
-            //app.UseAbp();
-
-            //app.UseOAuthBearerAuthentication(AccountController.OAuthBearerOptions);
-
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
@@ -24,15 +20,7 @@ namespace Blog_Solution.Web.App_Start
             });
 
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
-
-
-
-            //ENABLE TO USE HANGFIRE dashboard (Requires enabling Hangfire in ArtSolutionWebModule)
-            //app.UseHangfireDashboard("/hangfire", new DashboardOptions
-            //{
-            //    Authorization = new[] { new AbpHangfireAuthorizationFilter() } //You can remove this line to disable authorization
-            //});
-
+                        
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,

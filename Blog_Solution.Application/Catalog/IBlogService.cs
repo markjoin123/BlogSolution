@@ -53,7 +53,14 @@ namespace Blog_Solution.Catalog
         /// <param name="pageSize">页个数</param>
         /// <returns></returns>
         IPagedResult<Blog> GetAllBlogs(string keywords = null, DateTime? CreatedFrom = null, DateTime? CreatedTo = null,
-                                       int[] categoryIds = null, bool showHidden = false, int pageIndex = 0, int pageSize = int.MaxValue);
+                                       IList<int> categoryIds = null, bool showHidden = false, int pageIndex = 0, int pageSize = int.MaxValue);
+
+        /// <summary>
+        /// 根据主键获取博客
+        /// </summary>
+        /// <param name="Ids"></param>
+        /// <returns></returns>
+        IList<Blog> GetBlogs(int[] Ids);
 
     }
 }
