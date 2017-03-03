@@ -3,7 +3,7 @@
 namespace Blog_Solution.Web.Controllers
 {
     /// <summary>
-    /// 
+    /// 测试
     /// </summary>
     public class AboutController : Blog_SolutionControllerBase
     {
