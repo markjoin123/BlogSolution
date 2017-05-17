@@ -11,5 +11,10 @@ namespace Blog_Solution.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult Test() {
+
+            return View();
+        }
 	}
 }
